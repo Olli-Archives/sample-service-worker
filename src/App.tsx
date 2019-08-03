@@ -5,7 +5,8 @@ import { Pokemon } from './components/Pokemon';
 const App: React.FC = () => {
   return (
     <div className="App">
-    hi there service worker!!!
+   <h1>list of pokemon names</h1>
+   <p>contents will be available offline thanks to service workers</p>
     <Pokemon/>
     </div>
   );

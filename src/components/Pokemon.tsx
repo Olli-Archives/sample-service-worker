@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { PokemonNames } from './PokemonNames';
 
 type fetchState = {
   loading:boolean,
-  data:Array<{}>
+  data:Array<any>
 }
 
 export class Pokemon extends Component<{},fetchState>{
@@ -30,9 +31,9 @@ export class Pokemon extends Component<{},fetchState>{
 
   render(){
     return(
-      <div>
-        hi
-      </div>
+     
+        this.state && this.state.loading === false? <PokemonNames pokemon={this.state.data}/> : <p>loading</p>
+    
       )
   }
 }
